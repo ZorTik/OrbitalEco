@@ -12,6 +12,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 
 public final class OrbitalEco extends JavaPlugin {
 
@@ -72,7 +73,11 @@ public final class OrbitalEco extends JavaPlugin {
 
     public String getMessage(String key, Object... args) {
         return ChatColor.translateAlternateColorCodes('&',
-                String.format(messages.getString(key, ""), args));
+                String.format(messages.getString(key, ""), args.length > 0 ?
+                        Arrays.stream(args)
+                        .map(Object::toString)
+                        .toArray()
+                        : args));
     }
 
     private File getDatabaseFile() {
