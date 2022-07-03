@@ -1,0 +1,25 @@
+name: OrbitalEco
+version: '${version}'
+main: me.zort.orbitaleco.OrbitalEco
+author: ZorTik
+commands:
+  bal:
+    aliases:
+      - balance
+    description: "Checks player's balance."
+    usage: /bal [player]
+  give:
+    aliases:
+      - pay
+    description: "Gives player money."
+    usage: /give [player] [amount]
+  setbal:
+    aliases:
+      - setbalance
+    description: "Sets player's balance."
+    usage: /setbal [player] [amount]
+  earn:
+    aliases:
+      - earnmoney
+    description: "Earns money."
+    usage: /earn
